@@ -1,0 +1,31 @@
+.ticket {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  display: block;
+  width: fit-content;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  color: var(--color-light);
+  gap: 12px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid var(--color-brand-600);
+  background: var(--color-brand-600);
+  text-decoration: none;
+  transition: all 0.3s;
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 10px 18px;
+  }
+  &:hover {
+    background: var(--color-brand-700);
+  }
+}

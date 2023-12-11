@@ -1,0 +1,67 @@
+/*! purgecss start ignore */
+.container {
+  max-width: 97.5rem !important;
+  padding: 0 16px !important;
+  margin: 0 auto;
+}
+.gx-6 {
+  --bs-gutter-x: 1.5rem;
+}
+.gy-8 {
+  --bs-gutter-y: 32px;
+}
+.g-6 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+.mb-10 {
+  margin-bottom: 40px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-5 {
+  margin-bottom: 20px !important;
+}
+.mb-6 {
+  margin-bottom: 24px;
+}
+.mt-8 {
+  margin-top: 32px;
+}
+.mb-2 {
+  margin-bottom: 8px;
+}
+.text-primary {
+  color: var(--color-red) !important;
+}
+.text-secondary {
+  color: var(--color-yellow) !important;
+}
+.bold {
+  font-weight: 700;
+}
+.text-white {
+  color: var(--color-light) !important;
+}
+.container-small {
+  max-width: 45.2rem;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.mb-14 {
+  margin-bottom: 56px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 40px;
+  }
+}
+.g-20 {
+  --bs-gutter-x: 5rem;
+  --bs-gutter-y: 5rem;
+  @include media-breakpoint-down(xxl) {
+    --bs-gutter-x: 2.5rem;
+    --bs-gutter-y: 2.5rem;
+  }
+}
+/*! purgecss end ignore */

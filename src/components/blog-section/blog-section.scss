@@ -1,0 +1,123 @@
+.blogItemTop {
+  .h3 {
+    cursor: pointer;
+    text-decoration-color: transparent;
+    margin-bottom: 16px;
+    display: block;
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+  &__date {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--color-brand-700);
+    margin-bottom: 16px;
+  }
+  &__img {
+    width: 100%;
+    aspect-ratio: 708/364;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 20px;
+    &:hover img {
+      transform: scale(1.1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s;
+    }
+  }
+}
+.blog-section__scroll {
+  @include media-breakpoint-down(lg) {
+    overflow-x: auto;
+    width: max-content;
+  }
+}
+.blogItem__inner {
+  display: flex;
+  gap: 24px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+}
+.blogItem {
+  max-width: 25%;
+  flex: 25%;
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+    flex: none;
+    width: 265px;
+    display: inline-block;
+  }
+  .h5 {
+    cursor: pointer;
+    text-decoration-color: transparent;
+    display: block;
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 340/270;
+    overflow: hidden;
+    margin-bottom: 20px;
+    &:hover img {
+      transform: scale(1.1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s;
+    }
+  }
+  &__date {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--color-brand-700);
+    margin-bottom: 12px;
+  }
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  position: relative;
+  color: var(--color-brand-700);
+  padding-right: 26px;
+  text-decoration: none;
+  &:hover {
+    color: var(--color-brand-800);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-image: url("../images/ico/arrow-right.svg");
+  }
+}
+
+.blog-section {
+  margin-bottom: 64px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 24px;
+  }
+  &__top {
+    margin-bottom: 64px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 24px;
+    }
+  }
+}
