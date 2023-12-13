@@ -1,3 +1,113 @@
 <header class="header">
+  <div class="container">
+    <div class="headerTop">
+      <a href="#" class="header__logo">
+        <img src="images/ico/logo.svg" alt="" />
+      </a>
+      <div class="page__names">
+        <div class="page__action">
+          BMW IBU <span> WORLD CHAMPIONSHIPS BIATHLON </span> 2024
+        </div>
+        <div class="page__title">
+          Nové Město na Moravě <span>07.– 18. 02.</span>
+        </div>
+      </div>
+      <div class="headerTop__social">
+        <ul class="footer__links">
+          <li>
+            <a href="#" target="_blank" class="BiatlonLink">
+              <img src="images/ico/cesky-biatlon.svg" alt="biatlon" />
+            </a>
+          </li>
+          <li>
+            <a class="footer__links-item" target="_blank" href="#">
+              <img src="images/ico/fb.svg" alt="facebook" />
+            </a>
+          </li>
+          <li>
+            <a class="footer__links-item" target="_blank" href="#">
+              <img src="images/ico/instagram.svg" alt="instagram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="headerMenu">
+      <div class="headerMenu__left">
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+          <div class="c-header__opener-mob">Menu</div>
+        </button>
+        <a href="#" class="headerMenu__logo">
+          <img src="images/ico/logo.svg" alt="" />
+        </a>
+      </div>
 
+      <nav class="navbar">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Program </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Vstupenky </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Přidej se k nám </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navstevniky"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pro návštěvníky
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navstevniky">
+                <li>
+                  <a class="dropdown-item" href="#">polozka 1</a>
+                </li>
+                <li><a class="dropdown-item" href="#">polozka 2</a></li>
+                <li><a class="dropdown-item" href="#">polozka 3</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Kontakt </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Fanshop </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Galerie </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Články </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="languageLinks">
+        <li>
+          <a href="#">
+            <img src="images/ico/cz.svg" alt="language" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/ico/gb.svg" alt="language" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/ico/de.svg" alt="language" />
+          </a>
+        </li>
+      </ul>
+      {% include "@components/sideMenu/sideMenu.twig" %}
+    </div>
+  </div>
 </header>

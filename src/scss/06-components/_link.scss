@@ -1,0 +1,21 @@
+.link {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  position: relative;
+  color: var(--color-brand-700);
+  padding-right: 26px;
+  text-decoration: none;
+  &:hover {
+    color: var(--color-brand-800);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-image: url("../images/ico/arrow-right.svg");
+  }
+}

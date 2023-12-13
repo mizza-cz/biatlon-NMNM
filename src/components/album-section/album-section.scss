@@ -1,9 +1,17 @@
 .album-section {
-  max-width: 2400px;
+  max-width: 2000px;
   padding: 0 16px;
   margin: 0 auto 64px;
   @include media-breakpoint-down(xxl) {
     margin-bottom: 32px;
+  }
+  &__inner {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+    @include media-breakpoint-down(lg) {
+      --bs-gutter-x: 1rem;
+      --bs-gutter-y: 1rem;
+    }
   }
   figure {
     max-height: 330px;
@@ -29,3 +37,4 @@
     }
   }
 }
+
