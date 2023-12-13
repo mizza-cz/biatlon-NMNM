@@ -9,8 +9,8 @@
 }
 .is-nav-open .header {
   @include media-breakpoint-down(md) {
-    height: 100vh;
     overflow-y: scroll;
+    height: 100vh;
   }
 }
 .sideMenu {

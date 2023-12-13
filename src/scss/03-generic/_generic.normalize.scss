@@ -4,12 +4,16 @@
 *::before {
   box-sizing: inherit;
 }
-html,
+html {
+  position: relative;
+}
 body {
   position: relative;
   overflow-x: hidden;
 }
-
+.base {
+  overflow-x: hidden;
+}
 /* Remove default margin */
 body,
 h1,
