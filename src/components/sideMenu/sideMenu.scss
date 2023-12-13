@@ -7,6 +7,12 @@
     overflow-y: hidden;
   }
 }
+.is-nav-open .header {
+  @include media-breakpoint-down(md) {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
 .sideMenu {
   position: absolute;
   top: 100%;
@@ -20,6 +26,7 @@
   visibility: hidden;
   transition: all 0.3s;
   display: block !important;
+
   &::before {
     content: "";
     position: absolute;
