@@ -4,7 +4,7 @@
 }
 .is-nav-open {
   @include media-breakpoint-down(md) {
-    overflow-y: hidden;
+    overflow: hidden;
   }
 }
 .is-nav-open .header {
