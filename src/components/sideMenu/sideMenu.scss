@@ -11,6 +11,7 @@
   @include media-breakpoint-down(md) {
     overflow-y: scroll;
     height: 100vh;
+    overflow-x: hidden;
   }
 }
 .sideMenu {
