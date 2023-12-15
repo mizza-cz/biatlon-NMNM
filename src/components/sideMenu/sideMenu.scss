@@ -1,33 +1,45 @@
 .is-nav-open .sideMenu {
-  opacity: 1;
+  overflow-x: hidden;
   visibility: visible;
+  transform: translateX(0);
 }
 .is-nav-open {
   @include media-breakpoint-down(md) {
     overflow: hidden;
   }
 }
-.is-nav-open .header {
-  @include media-breakpoint-down(md) {
-    overflow-y: scroll;
-    height: 100vh;
-    overflow-x: hidden;
-  }
-}
-.sideMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 9999;
-  background-color: var(--bluePrimary);
-  max-width: 578px;
-  width: 100%;
-  padding-top: 32px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  display: block !important;
 
+.sideMenu {
+  top: 100%;
+  background-color: var(--bluePrimary);
+  padding-top: 32px;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 8000;
+  display: block !important;
+  flex-direction: column;
+  overflow-y: auto;
+
+  transition: transform 200ms 0s;
+  transition-property: transform, visibility;
+  transition-property: transform, visibility, width;
+  width: 30rem;
+  inset-inline-end: auto;
+
+  padding-top: 54px;
+  transform: translateX(-470px);
+  visibility: hidden;
+  &__box {
+    padding-left: 110px;
+    @include media-breakpoint-down(md) {
+      padding-left: 40px;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -52,6 +64,10 @@
   }
   @include media-breakpoint-down(md) {
     max-width: 100%;
+  }
+  .c-header__opener {
+    margin-bottom: 52px;
+    height: 40px;
   }
   &__links {
     display: flex;
@@ -137,9 +153,11 @@
     flex-wrap: wrap;
     padding: 0;
     gap: 0;
+
     li {
       max-width: 50%;
       flex: 0 0 50%;
+      overflow: hidden;
     }
     svg {
       width: 40px;

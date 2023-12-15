@@ -1,0 +1,8 @@
+.static-section {
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}

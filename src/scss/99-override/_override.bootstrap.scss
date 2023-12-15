@@ -56,6 +56,20 @@
     margin-bottom: 40px;
   }
 }
+.py-lg-16 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.pt-16 {
+  padding-top: 64px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 40px;
+  }
+}
 .g-20 {
   --bs-gutter-x: 5rem;
   --bs-gutter-y: 5rem;

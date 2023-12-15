@@ -226,7 +226,7 @@
   position: relative;
   color: var(--color-light);
   text-transform: uppercase;
-  z-index: 999;
+  z-index: 400;
   height: 100%;
   @include media-breakpoint-down(sm) {
     padding: 0.25rem 0;
@@ -272,7 +272,7 @@
     box-shadow: none;
   }
 }
-.c-header__opener.is-open {
+.js-header__closer {
   background-color: var(--bluePrimary);
   span {
     border-color: var(--color-bluePrimary);
