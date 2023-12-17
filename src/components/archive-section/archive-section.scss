@@ -1,0 +1,17 @@
+.archive-section {
+  &__wrapper {
+    padding-top: 64px;
+    @include media-breakpoint-down(lg) {
+      padding-top: 40px;
+    }
+  }
+  .blogItem {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 100%;
+    margin-bottom: 48px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
+  }
+}
