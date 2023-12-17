@@ -122,12 +122,33 @@
     box-shadow: none !important;
     border: none;
     left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     li {
       background-color: transparent;
     }
   }
   .sideMenu__link.dropdown-toggle.show {
     color: var(--color-brand-500);
+  }
+  .sideMenu__link.dropdown-toggle {
+    position: relative;
+    padding-right: 40px;
+    display: block;
+    width: fit-content;
+    &::before {
+      content: "";
+      transition: all 0.3s;
+      position: absolute;
+      right: 0;
+      background-image: url("../images/ico/chevron-right.svg");
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 16px;
+      transform: rotate(90deg);
+    }
   }
   .dropdown-item {
     background-color: transparent;
