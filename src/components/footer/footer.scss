@@ -144,6 +144,10 @@
 .BiatlonLink {
   height: 20px;
   display: block;
+
+  &:hover {
+    transform: scale(1.1);
+  }
   img {
     width: 100%;
     height: 100%;
