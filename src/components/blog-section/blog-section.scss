@@ -121,29 +121,25 @@
   }
 }
 .blog-section__scroll {
-  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  margin-right: 16px;
 }
 
 .blogItem__inner {
   display: flex;
-  // margin-left: -12px;
-  // margin-right: -12px;
-  -webkit-overflow-scrolling: touch;
-  width: max-content;
-  overflow-x: scroll;
-  gap: 16px;
+  margin-left: -12px;
+  margin-right: -12px;
   @include media-breakpoint-down(xl) {
+    overflow-x: auto;
+    gap: 16px;
+    margin-right: 16px;
+    margin-left: 0;
   }
 }
 
 .blogItem {
-  // max-width: 25%;
-  // flex: 0 0 auto;
-  max-width: 340px;
-  width: 340px;
-  // padding: 0 12px;
+  max-width: 25%;
+  flex: 0 0 auto;
+  padding: 0 12px;
   @include media-breakpoint-down(xl) {
     max-width: 265px;
     width: 265px;
