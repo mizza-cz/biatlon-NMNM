@@ -1,46 +1,15 @@
 .searchMenu {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   margin-bottom: 64px;
   @include media-breakpoint-down(lg) {
     margin-bottom: 32px;
   }
-  @include media-breakpoint-down(md) {
-    flex-wrap: wrap;
-    gap: 0;
-    margin-left: -8px;
-    margin-right: -8px;
-  }
-  &__category {
-    width: 100%;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: var(--color-gray-700);
-    margin-bottom: 6px;
-  }
-  &__select {
-    @include media-breakpoint-down(md) {
-      width: 100% !important;
-      max-width: 50%;
-      flex: 0 0 50%;
-      display: block;
-      padding: 0 8px;
-    }
-  }
-  .select2.select2-container {
-    @include media-breakpoint-down(md) {
-      width: 100% !important;
-      max-width: 100%;
-    }
-  }
-  &__form {
-    display: flex;
-    align-items: center;
-    position: relative;
+
+  &__label {
     max-width: 560px;
     width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
     @include media-breakpoint-down(md) {
       max-width: 100%;
@@ -95,6 +64,40 @@
         height: 100%;
         object-fit: contain;
       }
+    }
+  }
+  &__category {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--color-gray-700);
+    margin-bottom: 6px;
+  }
+  &__select {
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+      max-width: 50%;
+      flex: 0 0 50%;
+      display: block;
+      padding: 0 8px;
+    }
+  }
+  .select2.select2-container {
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+      gap: 0;
+      margin-left: -8px;
+      margin-right: -8px;
     }
   }
 }

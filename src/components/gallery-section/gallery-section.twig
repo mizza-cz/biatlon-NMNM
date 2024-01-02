@@ -16,46 +16,48 @@
           <h1 class="mb-6 h1">Galerie</h1>
           <div class="searchMenu">
             <form class="searchMenu__form" action="">
-              <div class="searchMenu__category">Vyhledávání</div>
-              <input
-                class="searchMenu__input"
-                placeholder="Hledaný text"
-                type="text"
-              />
-              <button class="searchMenu__btn">
-                {% include "@images/search.svg" %}
-              </button>
+              <div class="searchMenu__label">
+                <div class="searchMenu__category">Vyhledávání</div>
+                <input
+                  class="searchMenu__input"
+                  placeholder="Hledaný text"
+                  type="text"
+                />
+                <button class="searchMenu__btn">
+                  {% include "@images/search.svg" %}
+                </button>
+              </div>
+              <label class="searchMenu__select">
+                <div class="searchMenu__category">Rok</div>
+                <select class="js-select">
+                  <option>Rok</option>
+                  <option>2018/2019</option>
+                  <option>2019/2020</option>
+                  <option>2020/2021</option>
+                  <option>2021/2022</option>
+                  <option>2022/2023</option>
+                  <option>2023/2024</option>
+                </select>
+              </label>
+              <label class="searchMenu__select">
+                <div class="searchMenu__category">Měsíc</div>
+                <select class="js-select">
+                  <option>Měsíc</option>
+                  <option>leden</option>
+                  <option>únor</option>
+                  <option>březen</option>
+                  <option>duben</option>
+                  <option>květen</option>
+                  <option>červen</option>
+                  <option>červenec</option>
+                  <option>srpen</option>
+                  <option>září</option>
+                  <option>říjen</option>
+                  <option>listopad</option>
+                  <option>prosinec</option>
+                </select>
+              </label>
             </form>
-            <label class="searchMenu__select">
-              <div class="searchMenu__category">Rok</div>
-              <select class="js-select">
-                <option>Rok</option>
-                <option>2018/2019</option>
-                <option>2019/2020</option>
-                <option>2020/2021</option>
-                <option>2021/2022</option>
-                <option>2022/2023</option>
-                <option>2023/2024</option>
-              </select>
-            </label>
-            <label class="searchMenu__select">
-              <div class="searchMenu__category">Měsíc</div>
-              <select class="js-select">
-                <option>Měsíc</option>
-                <option>leden</option>
-                <option>únor</option>
-                <option>březen</option>
-                <option>duben</option>
-                <option>květen</option>
-                <option>červen</option>
-                <option>červenec</option>
-                <option>srpen</option>
-                <option>září</option>
-                <option>říjen</option>
-                <option>listopad</option>
-                <option>prosinec</option>
-              </select>
-            </label>
           </div>
         </div>
       </div>
