@@ -15,21 +15,27 @@
         <div class="col-xl-8 mx-auto">
           <h1 class="mb-6 h1">Archiv článků</h1>
           <div class="searchMenu">
-            <form class="searchMenu__form" action="">
+            <form id="search-form" class="searchMenu__form" action="">
               <div class="searchMenu__label">
                 <div class="searchMenu__category">Vyhledávání</div>
                 <input
                   class="searchMenu__input"
                   placeholder="Hledaný text"
-                  type="text"
+                  type="search"
+                  name="q"
                 />
-                <button class="searchMenu__btn">
+                <button class="searchMenu__btn" type="submit">
                   {% include "@images/search.svg" %}
                 </button>
               </div>
               <label class="searchMenu__select">
                 <div class="searchMenu__category">Rok</div>
-                <select class="js-select">
+                <select
+                  class="js-select"
+                  name="month"
+                  onchange="document.querySelector('#search-form')"
+                  name="year"
+                >
                   <option>Rok</option>
                   <option>2018/2019</option>
                   <option>2019/2020</option>
@@ -41,7 +47,11 @@
               </label>
               <label class="searchMenu__select">
                 <div class="searchMenu__category">Měsíc</div>
-                <select class="js-select">
+                <select
+                  class="js-select"
+                  name="month"
+                  onchange="document.querySelector('#search-form')"
+                >
                   <option>Měsíc</option>
                   <option>leden</option>
                   <option>únor</option>

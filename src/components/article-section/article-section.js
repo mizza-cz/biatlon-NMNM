@@ -21,7 +21,7 @@ function setShareLinks() {
   );
 
   $(".social-share.facebook").on("click", function () {
-    url = "https://www.facebook.com/sharer/sharer.php?u" + pageUrl;
+    url = "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
     socialWindow(url);
   });
 
@@ -35,3 +35,4 @@ function setShareLinks() {
     socialWindow(url);
   });
 }
+

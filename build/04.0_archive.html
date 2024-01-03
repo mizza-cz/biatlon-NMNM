@@ -250,18 +250,18 @@
 							<div class="col-xl-8 mx-auto">
 								<h1 class="mb-6 h1">Archiv článků</h1>
 								<div class="searchMenu">
-									<form class="searchMenu__form" action="">
+									<form id="search-form" class="searchMenu__form" action="">
 										<div class="searchMenu__label">
 											<div class="searchMenu__category">Vyhledávání</div>
-											<input class="searchMenu__input" placeholder="Hledaný text" type="text" />
-											<button class="searchMenu__btn">
+											<input class="searchMenu__input" placeholder="Hledaný text" type="search" name="q" />
+											<button class="searchMenu__btn" type="submit">
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M17.5 17.5l-2.917-2.917m2.084-5a7.083 7.083 0 11-14.167 0 7.083 7.083 0 0114.167 0z" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
 												</svg> </button>
 										</div>
 										<label class="searchMenu__select">
 											<div class="searchMenu__category">Rok</div>
-											<select class="js-select">
+											<select class="js-select" name="month" onchange="document.querySelector('#search-form')" name="year">
 												<option>Rok</option>
 												<option>2018/2019</option>
 												<option>2019/2020</option>
@@ -273,7 +273,7 @@
 										</label>
 										<label class="searchMenu__select">
 											<div class="searchMenu__category">Měsíc</div>
-											<select class="js-select">
+											<select class="js-select" name="month" onchange="document.querySelector('#search-form')">
 												<option>Měsíc</option>
 												<option>leden</option>
 												<option>únor</option>
