@@ -1,4 +1,3 @@
-import FsLightbox from "fslightbox";
 /**
  * Opens gallery
  * @param {Object} data
