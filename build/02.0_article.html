@@ -8,6 +8,9 @@
 	<meta name="format-detection" content="telephone=no" />
 
 	<!--****** Favicon ******-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
 	<!--****** Fonts ******-->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -498,7 +501,7 @@
 									</div>
 									<ul class="articleAuthor__links">
 										<li>
-											<div id="copyLink" data-link="https://esportsmedia.cz/">
+											<div id="copyLink">
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_7552_862)">
 														<path d="M4.167 12.5c-.777 0-1.165 0-1.472-.127a1.667 1.667 0 01-.902-.902c-.126-.306-.126-.694-.126-1.471V4.333c0-.933 0-1.4.181-1.756.16-.314.415-.569.729-.729.356-.181.823-.181 1.756-.181H10c.777 0 1.165 0 1.471.126.409.17.733.494.902.902.127.307.127.695.127 1.472m-2.333 14.166h5.5c.933 0 1.4 0 1.756-.181.314-.16.569-.415.729-.729.181-.356.181-.823.181-1.756v-5.5c0-.934 0-1.4-.181-1.757a1.667 1.667 0 00-.729-.728C17.067 7.5 16.6 7.5 15.667 7.5h-5.5c-.934 0-1.4 0-1.757.182-.314.16-.569.414-.728.728-.182.357-.182.823-.182 1.757v5.5c0 .933 0 1.4.182 1.756.16.314.414.569.728.729.357.181.823.181 1.757.181z" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
@@ -508,7 +511,7 @@
 															<path fill="#fff" d="M0 0h20v20H0z" />
 														</clipPath>
 													</defs>
-												</svg> Click me to copy link
+												</svg> Klikni pro zkopírování
 											</div>
 										</li>
 										<li>
@@ -562,22 +565,18 @@
 				</div>
 			</section>
 			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					var copyLinkButton = document.getElementById("copyLink");
-					if (copyLinkButton) {
-						copyLinkButton.addEventListener("click", function() {
-							var linkToCopy = this.getAttribute("data-link");
-							var textarea = document.createElement("textarea");
-							textarea.value = linkToCopy;
-							document.body.appendChild(textarea);
-							textarea.select();
-							textarea.setSelectionRange(0, 99999);
-							document.execCommand("copy");
-							document.body.removeChild(textarea);
-						});
-					} else {
-						console.error("Element with id 'copyLink' not found.");
-					}
+				function copyToClipboard(text) {
+					const tempInput = document.createElement("input");
+					tempInput.value = text;
+					document.body.appendChild(tempInput);
+					tempInput.select();
+					document.execCommand("copy");
+					document.body.removeChild(tempInput);
+				}
+				document.getElementById("copyLink").addEventListener("click", function() {
+					const url = window.location.href;
+					copyToClipboard(url);
+					alert("Odkaz zkopírován: " + url);
 				});
 			</script>
 			<div class="py-lg-16">
@@ -836,7 +835,8 @@
 						<div class="copyright">
 							All Rights Reserved ©
 							<span>
-								Český svaz biatlonu &
+								<a href="https://www.biatlon.cz/" target="_blank">Český svaz biatlonu</a>
+								&
 								<a href="https://esportsmedia.cz/" target="_blank">eSportsmedia.cz</a>
 							</span>
 						</div>

@@ -282,8 +282,8 @@
             </div>
             <ul class="articleAuthor__links">
               <li>
-                <div id="copyLink" data-link="https://esportsmedia.cz/">
-                  {% include "@images/copyLink.svg" %} Click me to copy link
+                <div id="copyLink">
+                  {% include "@images/copyLink.svg" %} Klikni pro zkopírování
                 </div>
               </li>
               <li>
@@ -309,22 +309,18 @@
   </div>
 </section>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var copyLinkButton = document.getElementById("copyLink");
+  function copyToClipboard(text) {
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  }
 
-    if (copyLinkButton) {
-      copyLinkButton.addEventListener("click", function () {
-        var linkToCopy = this.getAttribute("data-link");
-        var textarea = document.createElement("textarea");
-        textarea.value = linkToCopy;
-        document.body.appendChild(textarea);
-        textarea.select();
-        textarea.setSelectionRange(0, 99999);
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-      });
-    } else {
-      console.error("Element with id 'copyLink' not found.");
-    }
+  document.getElementById("copyLink").addEventListener("click", function () {
+    const url = window.location.href;
+    copyToClipboard(url);
+    alert("Odkaz zkopírován: " + url);
   });
 </script>
