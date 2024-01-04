@@ -15,21 +15,26 @@
         <div class="col-xl-8 mx-auto">
           <h1 class="mb-6 h1">Galerie</h1>
           <div class="searchMenu">
-            <form class="searchMenu__form" action="">
+            <form id="search-form" class="searchMenu__form" action="">
               <div class="searchMenu__label">
                 <div class="searchMenu__category">Vyhledávání</div>
                 <input
                   class="searchMenu__input"
                   placeholder="Hledaný text"
-                  type="text"
+                  type="search"
+                  name="q"
                 />
-                <button class="searchMenu__btn">
+                <button class="searchMenu__btn" type="submit">
                   {% include "@images/search.svg" %}
                 </button>
               </div>
               <label class="searchMenu__select">
                 <div class="searchMenu__category">Rok</div>
-                <select class="js-select">
+                <select
+                  class="js-select"
+                  onchange="document.querySelector('#search-form')"
+                  name="year"
+                >
                   <option>Rok</option>
                   <option>2018/2019</option>
                   <option>2019/2020</option>
@@ -41,7 +46,11 @@
               </label>
               <label class="searchMenu__select">
                 <div class="searchMenu__category">Měsíc</div>
-                <select class="js-select">
+                <select
+                  class="js-select"
+                  name="month"
+                  onchange="document.querySelector('#search-form')"
+                >
                   <option>Měsíc</option>
                   <option>leden</option>
                   <option>únor</option>
@@ -67,7 +76,30 @@
             <a
               href="#"
               class="blogItem__img"
-              data-gallery="1"
+              data-source="/ajax-gallery.json"
+              data-gallery-id="2"
+            >
+              <img src="images/content/blog-6.png" loading="lazy" alt="blog" />
+            </a>
+            <div class="blogItem__date">15. listopadu 2024</div>
+            <h4 class="h5">
+              <a href="#" class="h5">
+                Mix štafeta se biatlonistům povedla. České kvarteto pošilhávalo
+                po stupních vítězů, nakonec dojelo v Östersundu páté
+              </a>
+            </h4>
+            <div class="blogItem__user">
+              <img src="images/ico/user-icon.svg" alt="" />
+              Tomáš Pečínka
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-sm-6">
+          <div class="blogItem">
+            <a
+              href="#"
+              class="blogItem__img"
+              data-source="/ajax-gallery.json"
               data-gallery-id="1"
             >
               <img src="images/content/blog-6.png" loading="lazy" alt="blog" />
@@ -90,16 +122,20 @@
             <a
               href="#"
               class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
+              data-source="/ajax-gallery.json"
+              data-gallery-id="3"
             >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
+              <img
+                src="https://picsum.photos/1200/800"
+                loading="lazy"
+                alt="blog"
+              />
             </a>
             <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
+            <h4 class="h5">
               <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
+                Mix štafeta se biatlonistům povedla. České kvarteto pošilhávalo
+                po stupních vítězů, nakonec dojelo v Östersundu páté
               </a>
             </h4>
             <div class="blogItem__user">
@@ -113,8 +149,8 @@
             <a
               href="#"
               class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
+              data-source="/ajax-gallery.json"
+              data-gallery-id="4"
             >
               <img src="images/content/blog-6.png" loading="lazy" alt="blog" />
             </a>
@@ -136,199 +172,20 @@
             <a
               href="#"
               class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
+              data-source="/ajax-gallery.json"
+              data-gallery-id="6"
             >
-              <img src="images/content/blog-5.png" loading="lazy" alt="blog" />
+              <img
+                src="https://picsum.photos/1200/800"
+                loading="lazy"
+                alt="blog"
+              />
             </a>
             <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
+            <h4 class="h5">
               <a href="#" class="h5">
-                Davidová za pět na střelnici, do žlutého se oblékla Vittozziová
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-4.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Krčmář čtrnáctý a body bral i Mareček, přestože omylem vzal
-                zbraň krajanovi
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
-              </a>
-            </h4>
-            <div class="blogItem__user">
-              <img src="images/ico/user-icon.svg" alt="" />
-              Tomáš Pečínka
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-sm-6">
-          <div class="blogItem">
-            <a
-              href="#"
-              class="blogItem__img"
-              data-gallery="1"
-              data-gallery-id="1"
-            >
-              <img src="images/content/blog-3.png" loading="lazy" alt="blog" />
-            </a>
-            <div class="blogItem__date">15. listopadu 2024</div>
-            <h4>
-              <a href="#" class="h5">
-                Hořká porážka. Je to zvláštní, že to říkám po prvním závodě!
-                Biatlonová superstar bije na poplach
+                Mix štafeta se biatlonistům povedla. České kvarteto pošilhávalo
+                po stupních vítězů, nakonec dojelo v Östersundu páté
               </a>
             </h4>
             <div class="blogItem__user">
