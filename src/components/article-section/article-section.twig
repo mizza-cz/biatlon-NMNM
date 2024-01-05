@@ -284,6 +284,9 @@
               <li>
                 <div id="copyLink">
                   {% include "@images/copyLink.svg" %} Klikni pro zkopírování
+                  <span id="tooltip" style="visibility: hidden"
+                    >Odkaz zkopírován</span
+                  >
                 </div>
               </li>
               <li>
@@ -321,6 +324,10 @@
   document.getElementById("copyLink").addEventListener("click", function () {
     const url = window.location.href;
     copyToClipboard(url);
-    alert("Odkaz zkopírován: " + url);
+    const tooltip = document.getElementById("tooltip");
+    tooltip.style.visibility = "visible";
+    setTimeout(() => {
+      tooltip.style.visibility = "hidden";
+    }, 2000);
   });
 </script>

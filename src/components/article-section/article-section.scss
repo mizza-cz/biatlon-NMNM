@@ -224,6 +224,7 @@
   gap: 8px;
   color: var(--color-gray-700);
   align-items: center;
+  position: relative;
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
@@ -235,4 +236,27 @@
     height: 17px;
     display: block;
   }
+}
+#tooltip {
+  background-color: var(--bluePrimary);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+#tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--bluePrimary) transparent transparent transparent;
 }
