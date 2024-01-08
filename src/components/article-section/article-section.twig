@@ -311,23 +311,3 @@
     </div>
   </div>
 </section>
-<script>
-  function copyToClipboard(text) {
-    const tempInput = document.createElement("input");
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-  }
-
-  document.getElementById("copyLink").addEventListener("click", function () {
-    const url = window.location.href;
-    copyToClipboard(url);
-    const tooltip = document.getElementById("tooltip");
-    tooltip.style.visibility = "visible";
-    setTimeout(() => {
-      tooltip.style.visibility = "hidden";
-    }, 2000);
-  });
-</script>

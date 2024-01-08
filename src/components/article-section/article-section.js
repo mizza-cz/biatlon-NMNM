@@ -35,3 +35,27 @@ function setShareLinks() {
     socialWindow(url);
   });
 }
+
+function copyToClipboard(text) {
+  const tempInput = document.createElement("input");
+  tempInput.value = text;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
+const copyLinkElement = document.getElementById("copyLink");
+if (copyLinkElement) {
+  copyLinkElement.addEventListener("click", function () {
+    const url = window.location.href;
+    copyToClipboard(url);
+    const tooltip = document.getElementById("tooltip");
+    if (tooltip) {
+      tooltip.style.visibility = "visible";
+      setTimeout(() => {
+        tooltip.style.visibility = "hidden";
+      }, 2000);
+    }
+  });
+}
