@@ -9,9 +9,6 @@ window.cookieConsentSettings = (function () {
   }
 
   var currentLang = detectLanguageFromURL();
-  console.log(
-    "Tyto webové stránky používají k poskytování služeb, personalizaci reklam a analýze návštěvnosti soubory cookies. Některé z nich jsou k fungování stránky nezbytné, ale o některých"
-  );
 
   return {
     current_lang: currentLang,
