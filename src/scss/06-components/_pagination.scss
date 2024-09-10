@@ -12,8 +12,8 @@
   a:hover {
     svg,
     path {
-      fill: var(--color-brand-700) !important;
-      stroke: var(--color-brand-700) !important;
+      fill: var(--color-brand-500) !important;
+      stroke: var(--color-brand-500) !important;
     }
   }
 }
@@ -33,14 +33,14 @@
   text-align: center;
   width: 40px;
   &:hover {
-    color: var(--color-brand-700) !important;
+    color: var(--color-brand-500) !important;
   }
 }
 .page-item.active {
   .page-link {
     background-color: var(--color-gray-50);
     border-radius: 8px;
-    color: var(--color-brand-700) !important;
+    color: var(--color-brand-600) !important;
   }
 }
 
@@ -73,10 +73,10 @@
     width: auto !important;
 
     &:hover {
-      color: var(--color-brand-700);
+      color: var(--color-brand-500);
       svg,
       path {
-        stroke: var(--color-brand-700);
+        stroke: var(--color-brand-500);
       }
     }
   }

@@ -3,11 +3,11 @@
   font-weight: 600;
   line-height: 20px;
   position: relative;
-  color: var(--color-brand-700);
+  color: var(--color-brand-500);
   padding-right: 26px;
   text-decoration: none;
   &:hover {
-    color: var(--color-brand-800);
+    color: var(--color-brand-600);
   }
   &::before {
     content: "";
